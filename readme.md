@@ -48,7 +48,7 @@ dependencies {
 Initialize the SDK in the first activity with your `APP_NAME`, `URL`, `APP_SECRET` and `API_KEY` given from us. 
 
 ```kotlin
-ADAAnalytic.sharedInstace.setup(APP_NAME , URL ,APP_KEY , APP_SECRET,this) 
+ADAAnalytic.sharedInstance.setup(APP_NAME , URL ,APP_KEY , APP_SECRET,this) 
 ```
 
 #### Sending Data to SDK Server 
