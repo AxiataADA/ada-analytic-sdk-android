@@ -39,7 +39,7 @@ allprojects {
 
 ```gradle
 dependencies { 
-   implementation 'com.ada.utility:analytics:1.0.1' 
+   implementation 'com.ada.utility:analytics:1.0.2' 
 } 
 ```
 
@@ -47,15 +47,33 @@ dependencies {
 #### SDK Initialization 
 Initialize the SDK in the first activity with your `APP_NAME`, `URL`, `APP_SECRET` and `API_KEY` given from us. 
 
+**Kotlin**
 ```kotlin
 ADAAnalytic.sharedInstance.setup(APP_NAME , URL ,APP_KEY , APP_SECRET,this) 
+```
+
+**Java**
+```java
+ADAAnalytic.getSharedInstance().setup(APP_NAME , URL ,APP_KEY , APP_SECRET,this) 
 ```
 
 #### Sending Data to SDK Server 
 To log an event to server simply call this method and pass the `EVENT_NAME` along with any additional data if any (optional). 
 
+**Kotlin**
 ```kotlin
 ADAAnalytic.sharedInstance.logEvent(EVENT_NAME, mapOf(OPTIONAL_KEY_1 to OPTIONAL_VALUE_1)) 
+```
+
+**Java**
+```java
+Map<String, String> map = new HashMap<String, String>(){
+            {
+                put("OPTIONAL_KEY_1", "OPTIONAL_VALUE_1");
+                put("OPTIONAL_KEY_2", "OPTIONAL_KEY_2");
+            }
+        };
+ADAAnalytic.getSharedInstance().logEvent(EVENT_NAME, map) 
 ```
 
 ## Author
