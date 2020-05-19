@@ -39,7 +39,7 @@ allprojects {
 
 ```gradle
 dependencies { 
-   implementation 'com.ada.utility:analytics:1.0.2' 
+   implementation 'com.ada.utility:analytics:1.0.3' 
 } 
 ```
 
